@@ -9,11 +9,12 @@
 import UIKit
 
 class BooksToReadViewController: UITableViewController {
-    var data: [Book]! 
-
+    var data: [Book]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "BookCell")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,15 +28,16 @@ class BooksToReadViewController: UITableViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
     
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell", for: indexPath)
         cell.textLabel?.text = data[indexPath.row].title
         cell.detailTextLabel?.text = data[indexPath.row].author
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        
+        return cell
     }
 }
 
