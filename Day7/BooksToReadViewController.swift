@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class BooksToReadViewController: UITableViewController {
+    var data: [Book]! 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
 }
 
