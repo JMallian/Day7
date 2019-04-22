@@ -13,6 +13,7 @@
 		C5F63F8F226E72D4002582AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5F63F8E226E72D4002582AC /* Assets.xcassets */; };
 		C5F63F92226E72D4002582AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5F63F90226E72D4002582AC /* LaunchScreen.storyboard */; };
 		C5F63F9A226E737C002582AC /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F63F99226E737C002582AC /* Book.swift */; };
+		C5F63F9C226E77A5002582AC /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F63F9B226E77A5002582AC /* AddBookViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C5F63F91226E72D4002582AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5F63F93226E72D4002582AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5F63F99226E737C002582AC /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		C5F63F9B226E77A5002582AC /* AddBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				C5F63F90226E72D4002582AC /* LaunchScreen.storyboard */,
 				C5F63F93226E72D4002582AC /* Info.plist */,
 				C5F63F99226E737C002582AC /* Book.swift */,
+				C5F63F9B226E77A5002582AC /* AddBookViewController.swift */,
 			);
 			path = Day7;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5F63F8A226E72D3002582AC /* BooksToReadViewController.swift in Sources */,
+				C5F63F9C226E77A5002582AC /* AddBookViewController.swift in Sources */,
 				C5F63F88226E72D3002582AC /* AppDelegate.swift in Sources */,
 				C5F63F9A226E737C002582AC /* Book.swift in Sources */,
 			);

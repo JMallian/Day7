@@ -15,5 +15,10 @@ class BooksToReadViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func addNewItem(_ sender: UIBarButtonItem) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "AddBookViewController") as! AddBookViewController
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
