@@ -8,9 +8,14 @@
 
 import UIKit
 
+protocol canAddBookToDataSource {
+    func add(book: Book) -> Void
+}
+
 class AddBookViewController: UIViewController {
     @IBOutlet var titleTextField: UITextField!
     @IBOutlet var authorTextField: UITextField!
+    var addBookDelegate: canAddBookToDataSource? 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,10 +25,14 @@ class AddBookViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        view.endEditing(true) //convenient way to dismiss the keyboard without having to know which textField is the first responder 
+        view.endEditing(true) //convenient way to dismiss the keyboard without having to know which textField is the first responder
     }
     
     @IBAction func addBookButtonPressed(_ sender: UIButton) {
+        guard titleTextField.hasText, authorTextField.hasText, let delegate = addBookDelegate else {
+            return
+        }
+        delegate.add(book: Book(author: authorTextField.text!, title: titleTextField.text!))
     }
     
     @IBAction func backgroundTapped(_ sender: Any) {

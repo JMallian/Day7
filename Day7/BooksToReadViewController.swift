@@ -22,3 +22,10 @@ class BooksToReadViewController: UITableViewController {
     }
 }
 
+extension BooksToReadViewController: canAddBookToDataSource {
+    
+    func add(book: Book) {
+        data.append(book)
+    }
+}
+
