@@ -18,9 +18,17 @@ class AddBookViewController: UIViewController {
         authorTextField.delegate = self
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        view.endEditing(true) //convenient way to dismiss the keyboard without having to know which textField is the first responder 
+    }
+    
     @IBAction func addBookButtonPressed(_ sender: UIButton) {
     }
     
+    @IBAction func backgroundTapped(_ sender: Any) {
+        view.endEditing(true)
+    }
     
     
 }

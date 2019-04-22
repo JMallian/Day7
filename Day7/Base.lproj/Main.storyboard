@@ -111,7 +111,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="1q4-DH-zdr"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="eue-Hd-9Lt" appends="YES" id="cqW-AO-pPw"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="authorTextField" destination="hsQ-tl-ATW" id="PeP-zG-tlo"/>
@@ -119,6 +123,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddi-if-ogF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="eue-Hd-9Lt">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="ue9-gm-30R" id="qVl-ux-AZa"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2018.840579710145" y="-604.01785714285711"/>
         </scene>
