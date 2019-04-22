@@ -14,7 +14,6 @@ class BooksToReadViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "BookCell")
     }
     
     override func viewWillAppear(_ animated: Bool) {
