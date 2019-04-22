@@ -33,6 +33,7 @@ class AddBookViewController: UIViewController {
             return
         }
         delegate.add(book: Book(author: authorTextField.text!, title: titleTextField.text!))
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func backgroundTapped(_ sender: Any) {
